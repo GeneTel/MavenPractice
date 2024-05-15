@@ -1,15 +1,15 @@
 package org.gene;
 
-
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
-@Slf4j
+
+import static org.junit.Assert.assertEquals;
+
 public class JewelsAndStonesTest {
 
     @Test
-     void testNumJewelsInStones() {
+    void testNumJewelsInStones() {
         JewelsAndStones solution = new JewelsAndStones();
-        int result = solution.numJewelsInStones("aA", "aAAbbbb");
-        log.info("Result for testNumJewelsInStones: {}", result);
+        assertEquals(3, solution.numJewelsInStones("aA", "aAAbbbb"));
+        assertEquals(0, solution.numJewelsInStones("z", "ZZ"));
     }
 }

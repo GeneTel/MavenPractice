@@ -1,14 +1,16 @@
 package org.gene;
 
-import lombok.extern.slf4j.Slf4j;
+
 import org.junit.jupiter.api.Test;
 
-@Slf4j
+import static org.junit.Assert.assertEquals;
+
 public class NumberOfBalloonsTest {
     @Test
     void testMaxNumberOfBalloons() {
-        NumberOfBaloons solution = new NumberOfBaloons();
-        int result = solution.maxNumberOfBalloons("nlaebolko");
-        log.info("Result for testMaxNumberOfBalloons: {}", result);
+        JewelsAndStones solution = new JewelsAndStones();
+        assertEquals(1, solution.maxNumberOfBalloons("nlaebolko"));
+        assertEquals(2, solution.maxNumberOfBalloons("loonbalxballpoon"));
+        assertEquals(0, solution.maxNumberOfBalloons("leetcode"));
     }
 }

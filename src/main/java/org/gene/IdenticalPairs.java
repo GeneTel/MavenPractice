@@ -1,10 +1,8 @@
 package org.gene;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.HashMap;
 import java.util.Map;
-@Slf4j
+
 public class IdenticalPairs {
     public int numIdenticalPairs(int[] nums) {
     int count = 0;

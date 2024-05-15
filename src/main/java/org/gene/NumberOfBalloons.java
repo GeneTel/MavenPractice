@@ -2,8 +2,7 @@ package org.gene;
 
 import lombok.extern.slf4j.Slf4j;
 
-@Slf4j
-public class NumberOfBaloons {
+public class NumberOfBalloons {
     public int maxNumberOfBalloons(String text) {
         int[] counts = new int[26];
         for (char ch : text.toCharArray()) {

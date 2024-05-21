@@ -1,4 +1,4 @@
-package org.gene;
+package org.gene.unittests;
 
 
 public class JewelsAndStones {

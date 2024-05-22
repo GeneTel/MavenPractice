@@ -1,4 +1,4 @@
-package org.gene;
+package org.gene.unittests;
 
 import lombok.extern.slf4j.Slf4j;
 

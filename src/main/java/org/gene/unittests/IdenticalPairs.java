@@ -1,4 +1,4 @@
-package org.gene;
+package org.gene.unittests;
 
 import java.util.HashMap;
 import java.util.Map;

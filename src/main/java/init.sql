@@ -1,3 +1,4 @@
+-- Table: public.Homework
 
 CREATE TABLE IF NOT EXISTS public."Homework"
 (
@@ -6,15 +7,16 @@ CREATE TABLE IF NOT EXISTS public."Homework"
     description text COLLATE pg_catalog."default" NOT NULL,
     CONSTRAINT "Homework_pkey" PRIMARY KEY (id)
 )
-    TABLESPACE pg_default;
+TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Homework"
     OWNER to postgres;
 
+-- Table: public.Lesson
 
 CREATE TABLE IF NOT EXISTS public."Lesson"
 (
-    id integer NOT NULL GENERATED ALWAYS AS IDENTITY (INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 9223372036854775807 CACHE 1 ),
+    id bigint NOT NULL GENERATED ALWAYS AS IDENTITY (INCREMENT 1 START 1 MINVALUE 1 MAXVALUE 9223372036854775807 CACHE 1 ),
     name text COLLATE pg_catalog."default" NOT NULL,
     "updatedAt" time with time zone NOT NULL,
     homework_id integer NOT NULL,
@@ -24,11 +26,12 @@ CREATE TABLE IF NOT EXISTS public."Lesson"
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
 )
-    TABLESPACE pg_default;
+TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Lesson"
     OWNER to postgres;
 
+-- Table: public.Schedule
 
 CREATE TABLE IF NOT EXISTS public."Schedule"
 (
@@ -37,11 +40,12 @@ CREATE TABLE IF NOT EXISTS public."Schedule"
     "updatedAt" bigint NOT NULL,
     CONSTRAINT "Schedule_pkey" PRIMARY KEY (id)
 )
-    TABLESPACE pg_default;
+TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Schedule"
     OWNER to postgres;
 
+-- Join Table: public.Schedule_Lesson
 
 CREATE TABLE IF NOT EXISTS public."Schedule_Lesson"
 (
@@ -57,7 +61,7 @@ CREATE TABLE IF NOT EXISTS public."Schedule_Lesson"
         ON UPDATE NO ACTION
         ON DELETE NO ACTION
 )
-    TABLESPACE pg_default;
+TABLESPACE pg_default;
 
 ALTER TABLE IF EXISTS public."Schedule_Lesson"
     OWNER to postgres;
